@@ -8,7 +8,7 @@ require "snd"
 require "cutscene"
 --require "dbg"
 
-std.cut_text = '^'..fmt.nb('<')..'CLIQUE POUR CONTINUER>'
+std.cut_text = '^'..fmt.nb('<')..'CLIQUEZ POUR CONTINUER>'
 fmt.quotes = false
 instead.notitle = true
 
@@ -36,7 +36,7 @@ cutscene {
 	decor =  function()
 		pn ([[DARK CRYSTAL ADVENTURE
 			^UNE AVENTURE TEXTUELLE.
-			^CLIQUE SUR "COMMENCER" OU [TAP] POUR DEBUTER L'AVENTURE.]]);
+			^CLIQUEZ SUR "COMMENCER" OU [TAP] POUR DEBUTER L'AVENTURE.]]);
 	end,
 	way = { path {pic = 'images/loading.jpg', '#START', 'COMMENCER', 'key1'} };
 }
@@ -49,12 +49,12 @@ cutscene {
 		p '[code ways():disable()]';
 		pn ([[Jen est dans une jolie vallée montagneuse.
 Les mystiques lui ont donné un nom spécial : "La Vallée des Pierres".
-Un mystique s'approche de Jen et dit : "urSu, le plus sage de notre race, se meurt. Il m'a envoyé te chercher. Viens vite" !
+Un mystique s'approche de Jen et dit : "urSu, le plus sage de notre race, se meurt. Il m'a envoyé te chercher. Viens vite" !
 Puis le mystique s'éloigne.]]);
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que veux-tu faire ?
+		pn([[Que faites-vous ?
 			^"REGARDER" OU "SUIVRE"]]);
 	end,
 	way = { path {'#LOOK', 'REGARDER', 'key1b'}:disable(),
@@ -72,7 +72,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que veux-tu faire ?
+		pn([[Que faites-vous ?
 			^REVENIR "EN ARRIERE" OU "SUIVRE"]]);
 	end,
 	way = { path {'#1bBACK', 'EN ARRIERE', 'key1'}:disable(),
@@ -86,7 +86,7 @@ cutscene {
 	pic = "images/DC_2.png",
 	decor = function()
 		p '[code ways():disable()]';
-		pn ([[ Jen est dans une grande caverne éclairée par des bougies. UrSu, le plus sage parmis les mystiques, est étendu ici, mourant. UrSu soupire et dit : "Au moment de la grande conjonction, ou convergence des trois soleils de notre monde, les maléfiques Skeksès ont pris le contrôle du grand cristal qui gouverne notre destinée.]]);
+		pn ([[ Jen est dans une grande caverne éclairée par des bougies. urSu, le plus sage parmis les mystiques, est étendu ici, mourant. urSu soupire et dit : "Au moment de la grande conjonction, ou convergence des trois soleils de notre monde, les maléfiques Skeksès ont pris le contrôle du grand cristal qui gouverne notre destinée.]]);
 		pn '[cut]';
 		p '[cls]';
 		pn ([[Le cristal s'est fendu et s'est assombri. Et il restera sombre jusqu'à ce que la pièce qui s'en est détachée, l'éclat de cristal, y soit réintégré. Une prophétie affirme que l'éclat ne peut être remis en place que par la main d'un Gelfling, et seulement au moment de la prochaine grande conjonction.]]);
@@ -105,7 +105,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que veux-tu faire ?
+		pn([[Que faites-vous ?
 			^"REGARDER" OU "PARTIR"]]);
 	end,
 	way = { path {'#2ALOOK', 'REGARDER', 'key2b'}:disable(),
@@ -124,7 +124,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que veux-tu faire ?
+		pn([[Que faites-vous ?
 			^REVENIR "EN ARRIERE" OU "PARTIR"]]);
 	end,
 	way = { path {'#2BLOOK', 'EN ARRIERE', 'key2'}:disable(),
@@ -144,7 +144,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que veux-tu faire ?
+		pn([[Que faites-vous ?
 			^"REGARDER", "SE REPOSER", OU "MARCHER"]]);
 	end,
 	way = { path {'#3ALOOK', 'REGARDER', 'key3b'}:disable(),
@@ -164,7 +164,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que veux-tu faire ?
+		pn([[Que faites-vous ?
 			^REVENIR "EN ARRIERE", OU "MARCHER", OU "SE REPOSER"]]);
 	end,
 	way = { path {'#3BBACK', 'EN ARRIERE', 'key3'}:disable(),
@@ -183,8 +183,8 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Tu as échoué.
-			^CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+		pn([[Vous avez échoué.
+			^CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#3CSTART', 'RECOMMENCER', 'main'}:disable(),
 	};
@@ -200,7 +200,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"CRIER" OU "SE DEBATTRE"]]);
 	end,
 	way = { path {'#4YELL', 'CRIER', 'key4b'}:disable(),
@@ -218,7 +218,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"CRIER" OU "SE DEBATTRE"]]);
 	end,
 	way = { path {'#4BYELL', 'CRIER', 'key4b'}:disable(),
@@ -238,7 +238,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"PARLER" OU "SE DEBATTRE"]]);
 	end,
 	way = { path {'#4CTALK', 'PARLER', 'key4d'}:disable(),
@@ -256,7 +256,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"RETOUR" OU "SE DEBATTRE"]]);
 	end,
 	way = { path {'#4DBACK', 'RETOUR', 'key4c'}:disable(),
@@ -275,7 +275,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que répond Jen ?
+		pn([[Que répondez-vous ?
 			^"OUI" OU "NON"]]);
 	end,
 	way = { path {'#4EYES', 'OUI', 'key4el'}:disable(),
@@ -293,8 +293,8 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Tu as échoué.
-			^CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+		pn([[Vous avez échoué.
+			^CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#3CSTART', 'RECOMMENCER', 'main'}:disable(),
 	};
@@ -328,7 +328,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"REGARDER" OU "DEMANDER"]]);
 	end,
 	way = { path {'#5LOOK', 'REGARDER', 'key5b'}:disable(),
@@ -346,7 +346,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"REGARDER" OU "DEMANDER"]]);
 	end,
 	way = { path {'#5BLOOK', 'REGARDER', 'key5b'}:disable(),
@@ -367,7 +367,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"PARLER" OU "PARTIR"]]);
 	end,
 	way = { path {'#5CTALK', 'PARLER', 'key5d'}:disable(),
@@ -385,7 +385,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"PARTIR" OU REVENIR "EN ARRIERE"]]);
 	end,
 	way = { path {'#5DLEAVE', 'PARTIR', 'key6'}:disable(),
@@ -403,7 +403,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"MARCHER"]]);
 	end,
 	way = { path {'#6WALK', 'MARCHER', 'key7'}:disable(),
@@ -420,7 +420,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"SE DEBATTRE" OU "CRIER"]]);
 	end,
 	way = { path {'#7STRUGGLE', 'SE DEBATTRE', 'key7b'}:disable(),
@@ -438,8 +438,8 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Tu as échoué.
-			^CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+		pn([[Vous avez échoué.
+			^CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#7BSTART', 'RECOMMENCER', 'main'}:disable(),
 	};
@@ -458,7 +458,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"PARLER" OU "MARCHER"]]);
 	end,
 	way = { path {'#7CTALK', 'PARLER', 'key7d'}:disable(),
@@ -476,7 +476,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"EN ARRIERE" OU "MARCHER"]]);
 	end,
 	way = { path {'#7DBACK', 'EN ARRIERE', 'key7c'}:disable(),
@@ -494,7 +494,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que font-ils ?
+		pn([[Que faites-vous ?
 			^"PARLER" OU "REGARDER"]]);
 	end,
 	way = { path {'#8TALK', 'PARLER', 'key8b'}:disable(),
@@ -512,7 +512,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que font-ils ?
+		pn([[Que faites-vous ?
 			^"REGARDER" OU "EN ARRIERE"]]);
 	end,
 	way = { path {'#8BBACK', 'EN ARRIERE', 'key8'}:disable(),
@@ -530,7 +530,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que font-ils ?
+		pn([[Que faites-vous ?
 			^"SUIVRE"]]);
 	end,
 	way = { path {'#8CFOLLOW', 'SUIVRE', 'key9'}:disable(),
@@ -547,7 +547,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"DEMANDER" OU "SAUTER"]]);
 	end,
 	way = { path {'#9ASK', 'DEMANDER', 'key9b'}:disable(),
@@ -565,7 +565,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"EN ARRIERE" OU "SAUTER"]]);
 	end,
 	way = { path {'#9BBACK', 'EN ARRIERE', 'key9'}:disable(),
@@ -583,7 +583,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que font-ils ?
+		pn([[Que faites-vous ?
 			^"SE REPOSER" OU "CHEVAUCHER"]]);
 	end,
 	way = { path {'#10REST', 'SE REPOSER', 'key10b'}:disable(),
@@ -601,8 +601,8 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Tu as échoué.
-			^CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+		pn([[Vous avez échoué.
+			^CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#10BSTART', 'RECOMMENCER', 'main'}:disable(),
 	};
@@ -654,7 +654,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que font-ils ?
+		pn([[Que faites-vous ?
 			^"PARLER" OU "MARCHER"]]);
 	end,
 	way = { path {'#12TALK', 'PARLER', 'key12a'}:disable(),
@@ -672,7 +672,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que font-ils ?
+		pn([[Que faites-vous ?
 			^"MARCHER"]]);
 	end,
 	way = { path {'#12A', 'MARCHER', 'key13'}:disable(),
@@ -689,7 +689,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"SUIVRE"]]);
 	end,
 	way = { path {'#13FOLLOW', 'SUIVRE', 'key14'}:disable(),
@@ -707,7 +707,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"COURIR"]]);
 	end,
 	way = { path {'#14RUN', 'COURIR', 'key15'}:disable(),
@@ -724,7 +724,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"SE REPOSER" OU "MARCHER"]]);
 	end,
 	way = { path {'#15REST', 'SE REPOSER', 'key15b'}:disable(),
@@ -742,8 +742,8 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Tu as échoué.
-			^CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+		pn([[Vous avez échoué.
+			^CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#15BSTART', 'RECOMMENCER', 'main'}:disable(),
 	};
@@ -761,7 +761,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"SAUTER"]]);
 	end,
 	way = { path {'#16JUMP', 'SAUTER', 'key17'}:disable(),
@@ -801,8 +801,8 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Tu as échoué.
-			^CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+		pn([[Vous avez échoué.
+			^CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#17BSTART', 'RECOMMENCER', 'main'}:disable(),
 	};
@@ -818,7 +818,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"SOIGNER"]]);
 	end,
 	way = { path {'#17CHEAL', 'SOIGNER', 'key18'}:disable(),
@@ -841,7 +841,7 @@ cutscene {
 		pn '[cut]';
 		p '[cls]';
 		p '[code ways():enable()]';
-		pn([[Que fait Jen ?
+		pn([[Que faites-vous ?
 			^"EMBRASSER"]]);
 	end,
 	way = { path {'#18KISS', 'EMBRASSER', 'key19'}:disable(),
@@ -862,7 +862,7 @@ cutscene {
 		p '[cls]';
 		p '[code ways():enable()]';
 		pn([[Merci d'avoir joué à "THE DARK CRYSTAL" !
-			^Tu es victorieux. CLIQUE SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
+			^Vous êtes victorieux. CLIQUEZ SUR "RECOMMENCER" OU [TAP] POUR RETENTER L'AVENTURE.]]);
 	end,
 	way = { path {'#19START', 'RECOMMENCER', 'main'}:disable(),
 	};
